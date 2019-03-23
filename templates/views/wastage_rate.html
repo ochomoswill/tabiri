@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Wastage Rate
+
+{% endblock %}
+
+{% block content %}
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-8">
+                <h3 class="mb-0">Wastage Rate</h3>
+                <p class="mt-2">Vaccine wastage rate should be taken into account in the estimation of vaccine needs. Knowing
+                    the wastage rates helps to determine the wastage factor, which is one of the parameters used to
+                    estimate vaccine needs.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card mb-3">
+    <div class="card-header">
+        <h5 class="mb-0">Upload dataset</h5>
+    </div>
+    <div class="card-body bg-light">
+        <div class="row">
+            <div class="col-12">
+                <form method="post" enctype="multipart/form-data" action="{% url 'wastage_rate_upload' %}"> 
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Upload dataset</label>
+                        <input class="form-control-file" id="exampleFormControlFile1" type="file" name="myfile">
+                    </div>
+                    <button class="btn btn-primary mb-3" type="submit">Upload</button>
+                </form>
+                
+
+                {% if uploaded_file_url %}
+                    <p>File uploaded at: <a href="{% static 'routing/leaflet-routing-machine.css' %}">{{ uploaded_file_url }}</a></p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card mb-3">
+    <div class="card-header">
+        <h5 class="mb-0">Visualize dataset</h5>
+        <span class="mt-2">Brief analysis of the data</span>
+    </div>
+    <div class="card-body bg-light">
+        <div class="row">
+            <div class="col-12">
+                {% if show_dataset %}
+                    <img src="{% static 'plots/wastage_rate/validation.png' %}" style="max-width: 100%; min-width:100%;">
+                {% else %}
+                    <div class="atlas-chart" data-id="H13grQLQ" data-width="640" data-height="449">
+                        <img src="https://www.theatlas.com/i/atlas_H13grQLQ.png" style="max-width: 100%; min-width:100%;">
+                    </div><script src="https://www.theatlas.com/javascripts/atlas.js"></script>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="card mb-3">
+    <div class="card-header">
+        <h5 class="mb-0">Initiate training</h5>
+    </div>
+    <div class="card-body bg-light">
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-primary mb-3" type="submit">Click train button to train the model</button>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="card mb-3">
+    <div class="card-header">
+        <h5 class="mb-0">Visualize forecast</h5>
+        <span class="mt-2">Brief analysis of the model output</span>
+    </div>
+    <div class="card-body bg-light">
+        <div class="row">
+            <div class="col-12">
+                <div class="col-12">
+                    {% if show_forecast %}
+                    <img src="{% static 'plots/wastage_rate/forecast.png' %}" style="max-width: 100%; min-width:100%;">
+                    {% else %}
+                    <div class="atlas-chart" data-id="H13grQLQ" data-width="640" data-height="449">
+                        <img src="https://www.theatlas.com/i/atlas_H13grQLQ.png" style="max-width: 100%; min-width:100%;">
+                    </div><script src="https://www.theatlas.com/javascripts/atlas.js"></script>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <h5 class="mb-0">Model Errors</h5>
+    </div>
+    <div class="card-body bg-light">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Error Type</th>
+                        <th>Value</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>MASE</td>
+                        <td>2.44</td>
+                    </tr>
+                    <tr>
+                        <td>MAPE</td>
+                        <td>2.44</td>
+                    </tr>
+                    <tr>
+                        <td>RMSE</td>
+                        {% if rmse %}
+                            <td>{{rmse}}</td>
+                        {% else %}
+                            <td>N/A</td>
+                        {% endif %}
+
+                    </tr>
+                    <tr>
+                        <td>MAE</td>
+                        <td>34.83</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

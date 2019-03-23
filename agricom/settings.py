@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.gis',
     'leaflet',
-    'reporter'
+    'reporter',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media'
             ],
         },
     },
@@ -79,10 +80,10 @@ WSGI_APPLICATION = 'agricom.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'agricom',
-        'USER': 'postgres',
+        'NAME': 'gis_db',
+        'USER': 'gis_db_user',
         'HOST': 'localhost',
-        'PASSWORD': 'postgres',
+        'PASSWORD': '5ky302ld',
         'PORT': '5432',
     }
 }
@@ -130,11 +131,14 @@ STATICFILES_DIRS =(
     os.path.join(BASE_DIR,'static'),
 )
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (-.023, 36.87),
     'DEFAULT_ZOOM': 5,
     'MAX_ZOOM': 20,
     'MIN_ZOOM':3,
     'SCALE': 'both',
-    'ATTRIBUTION_PREFIX': 'Inspired by Life in GIS'
+    'ATTRIBUTION_PREFIX': 'Work of ochomoswill'
 }

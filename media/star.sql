@@ -1,0 +1,31 @@
+CREATE TABLE IF NOT EXISTS star (
+    `list_path` VARCHAR(17) CHARACTER SET utf8,
+    `list_title` VARCHAR(89) CHARACTER SET utf8,
+    `list_price` VARCHAR(13) CHARACTER SET utf8,
+    `list_location` VARCHAR(33) CHARACTER SET utf8,
+    `list_description` VARCHAR(163) CHARACTER SET utf8
+);
+INSERT INTO star VALUES
+    ('images/819203.jpg',' Stunning one bedroom off Ngong road kirichwa lane behind the green house ',' KSh 16,000 ','Nairobi','Excellent one bedroom room vacant privately gated detached extension available to let along Ngong road close to the green house off kirichwa lane at kirichwa...'),
+    ('images/992978.jpg',' Stylish 3br town house at ruaka near quick mart ruaka ',' KSh 32,000 ','Nairobi','Magnificent executive and modernly finished three bed roomed town house to let located at ruaka near quick mart super market'),
+    ('images/786543.jpg',' Lavish stunning 3br at Pangani muthaiga view estate close to muthaiga view suites ',' KSh 25,000 ','Pangani, Starehe','Excellent located three bedroom house located at Pangani estate muthaiga view close to muthaiga suites.'),
+    ('images/536068.jpg',' Five bedroom house Nairobi Kenya Kes 16000 ',' KSh 16,000 ','Kilimani, Dagoretti North','Sublet.com listing id 4090662. Call 201-845-7300 for more information. Decent 1 bedroom extended from the main house with an own entrance,electricity is token,a...'),
+    ('images/319698.jpg',' Stunning magnificent 4br at south C mugoya near mugoya vegetable shop ',' KSh 45,000 ','Imara Daima, Embakasi South','Lovely four bed roomed en-suite town house with a DSQ is vacant and available for rent at south C mugoya near mugoya vegetable shop'),
+    ('images/75005.jpg',' Five bedroom house Nairobi Kenya Kes 90000 ',' KSh 90,000 ','Karura, Westlands','Sublet.com listing id 3577077. Call 201-845-7300 for more information. One bedroom guest house Fully furnished Located on Eliud Mathu Road in Runda Secure and...'),
+    ('images/849514.jpg',' Prettily finished one bedroom in south C mugoya ',' KSh 16,000 ','Imara Daima, Embakasi South','Executive neat and spacious one bedroom house available to let in south C mugoya'),
+    ('images/586184.jpg',' Modern 3br at Kasarani season near equity ',' KSh 24,000 ','Kasarani, Nairobi','Executive modern and superbly finished three bedroom house in Kasarani seasons'),
+    ('images/395244.jpg',' Three bedroom house to let in Thome ',' KSh 35,000 ','Nairobi','If you are looking for a home for you and your family then this is the perfect home for you. Located a few meters from Thika road the house offers proximity to...'),
+    ('images/160206.jpg',' 2 Bed Pent house in Westlands - Vaal ',' KSh 120,000 ','Westlands, Nairobi','2 Bedroom pent house Apt. both en-suite Dsq on 7th floor. Amenities: -24/7 Security and CCTV surveillance -Ample Parking -Pool -Gym -Terrace -High Speed Lifts ...'),
+    ('images/925854.jpg',' Vacant 2 bedroom at roysambu behind TRM ',' KSh 18,000 ','Roysambu, Nairobi','Spacious 2 bedroom house to let at roysambu behind Thika road mall.It has sufficient water supply,electricity is token,master ensuite and in a cool environment...'),
+    ('images/691138.jpg',' Beautifully done one bedroom house is ready for occupation at Nairobi West ',' KSh 13,000 ','Nairobi West, Langata','Modern spacious and very unique one bedroom house is ready for occupation at Nairobi West'),
+    ('images/520571.jpg',' Lovely nicely done one bedroom house is ready for occupation at uthiru ',' KSh 8,000 ','Uthiru/Ruthimitu, Dagoretti South','A modern spacious clean one bedroom house is ready for occupation at uthiru'),
+    ('images/332145.jpg',' Unique very smart one bedroom house is ready for occupation at Kasarani ',' KSh 12,000 ','Kasarani, Nairobi','Modern beautiful one bedroom house is ready for occupation at Kasarani'),
+    ('images/114989.jpg',' Five bedroom house Nairobi Kenya Kes 230000 ',' KSh 230,000 ','Karen, Langata','Sublet.Com listing ID 4076587. Call 201-845-7300 for more information. Contact Peter. These are luxurious yet distinct modern villas located at the heart of...'),
+    ('images/869509.jpg',' Nice very beautiful one bedroom house is ready for occupation at ngumo ',' KSh 13,500 ','Nairobi','Unique spacious one bedroom house is ready for occupation at ngumo'),
+    ('images/655072.jpg',' Five bedroom house Nairobi Kenya Kes 18500 ',' KSh 18,500 ','Lower Savannah, Embakasi East','Sublet.com listing id 4074075. Call 201-845-7300 for more information. Unique spacious two bedroom house is ready for occupation at Donholm, Has own gate and...'),
+    ('images/395349.jpg',' Modern spacious clean two bedroom house is ready for occupation at kahawa sukari ',' KSh 16,000 ','Kahawa, Roysambu','A modern spacious very clean two bedroom house is ready for occupation at kahawa sukari. Has own gate and compound for parking a large sitting area both bedroom...'),
+    ('images/176927.jpg',' Unique very spacious one bedroom house is ready for occupation at south B ',' KSh 13,000 ','Nairobi','Nice unique one bedroom house is ready for occupation at south B'),
+    ('images/957745.jpg',' Nice spacious semi detached DSQ one bedroom house is ready for occupation at kileleshwa ',' KSh 20,000 ','Kileleshwa, Dagoretti North','A nice spacious modern very beautiful semi detached one bedroom DSQ is ready for occupation at kileleshwa has own gate and compound for parking'),
+    ('images/708361.jpg',' 5 Bed House for Rent in Nyari | Real Estate by VAAL ',' KSh 400,000 ','Nairobi','House for Rent Nyari Estate Ibis Dr Rd near Barrier 3. 5 Bedroom Standalone House 2 Dsq Amenities: 24/7 Security Ample Parking Safe Haven 2 Bath tabs Larger...'),
+    ('images/456330.jpg',' Nice very clean two bedroom house is ready for occupation at Kasarani ',' KSh 20,500 ','Kasarani, Nairobi','A modern spacious clean two bedroom house is ready for occupation at Kasarani, has own gate and compound for parking a large sitting area with a dining space...'),
+    ('images/248067.jpg',' 4 Bed all ensuite Ambassadorial house in Nyari - Vaal ',' KSh 400,000 ','Nairobi','Nyari Estate 4Br Ambassadorial House, all en-suite Dsq for 2. Amenities; Fitted closed kitchen with an extra outside Kitchen Full backup generator Ample parking...');

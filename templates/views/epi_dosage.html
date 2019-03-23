@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Wastage Rate
+
+{% endblock %}
+
+{% block content %}
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-8">
+                <h3 class="mb-0">Doses in Immunization Schedule</h3>
+                <p class="mt-2">Immunization schedule determine the age limits and the number of doses required to be fully
+                    immunized among each target group (children under one and women of childbearing age).</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card mb-3">
+    <div class="card-header">
+        <h5 class="mb-0">Model Errors</h5>
+    </div>
+    <div class="card-body bg-light">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Vaccines</th>
+                        <th>Number of Doses</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>BCG</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Polio</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Pentavalent</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>PCV</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Yellow Fever</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Measles</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tetanus Toxoid for women of child bearing
+                            age (15-49 years)
+                        </td>
+                        <td>5</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
